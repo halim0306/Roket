@@ -26,7 +26,7 @@ public class Moment : MonoBehaviour
 
     void ProcessThrust()
     {
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.W))
         {
             rb.AddRelativeForce(Vector3.up * mainThrust * Time.deltaTime);
             if (!mainEngineParticles.isPlaying)
@@ -42,7 +42,7 @@ public class Moment : MonoBehaviour
 
     void ProcessRotation()
     {
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.E))
         {
             ApplyRotation(rotationThrust);
             if (!rightThrusterParticles.isPlaying)
@@ -50,7 +50,7 @@ public class Moment : MonoBehaviour
                 rightThrusterParticles.Play();
             }
         }
-        else if (Input.GetKey(KeyCode.D))
+        else if (Input.GetKey(KeyCode.Q))
         {
             //ransform.Rotate(-Vector3.forward * rotationThrust * Time.deltaTime);
             ApplyRotation(-rotationThrust);
